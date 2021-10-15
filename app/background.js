@@ -75,7 +75,6 @@ function UserSettings(copyFrom) {
         uid: "",
         apiToken: ""
     };
-    // this.PassDurationMins = copyFrom ? copyFrom.PassDurationMins : 30;
     this.PomoDurationMins = copyFrom ? copyFrom.PomoDurationMins : 25;
     this.PomoHabitPlus = copyFrom ? copyFrom.PomoHabitPlus : false; //Hit + on habit when pomodoro done
     this.PomoHabitMinus = copyFrom ? copyFrom.PomoHabitMinus : false; //Hit - on habit when pomodoro is interupted
@@ -284,7 +283,7 @@ function mainSiteBlockFunction(tab) {
         }
 
         //Check if the user is not on the same site for longer than passDuration
-        var passDurationMiliSec = GetSitePassDuration(GetBlockedSite(siteUrl)) * 60 * 1000
+        var passDurationMiliSec = GetSitePassDuration(GetBlockedSite(siteUrl.hostname)) * 60 * 1000
         setTimeout(function (arg) {
             mainSiteBlockFunction(arg);
         }, passDurationMiliSec, tab);
