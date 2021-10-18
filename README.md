@@ -28,12 +28,11 @@ If you like this project and want to support, you can buy me a coffe :) https://
 ### Debuging in Firefox:
 To test the extension in firefox go to the url "about:debugging" => This firefox => Load Temporary add-on => choose manifest.json file in the app folder.
 
-*Before installing, add the following option to manifest.json to allow using local storage to the temporary add-on 
-(the specific id is not relavent, just the format):
+*Before installing, add the following option to manifest.json to allow using local storage to the temporary add-on:
 
     "browser_specific_settings": {
         "gecko": {
-            "id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}",
+            "id": "{9ed782e5-6280-4bed-bece-dea374ea9c2f}",
             "strict_min_version": "42.0"
         }
     }
